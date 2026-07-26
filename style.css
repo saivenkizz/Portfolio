@@ -1224,3 +1224,16 @@ transform:translateY(-10px);
 }
 
 }
+.contact-info a:link,
+.contact-info a:visited{
+    color: white;
+    text-decoration: none;
+}
+
+.contact-info a:hover{
+    color: #181717;
+}
+
+.contact-info a:active{
+    color: white;
+}
