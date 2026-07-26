@@ -105,6 +105,9 @@ const bootLines=[
 
 "> Initializing System...",
 
+/*
+
+
 "> Loading COBOL Runtime",
 
 "> Connecting DB2",
@@ -116,8 +119,9 @@ const bootLines=[
 "> Starting Python Automation",
 
 "> Enterprise Services Online",
-
+*/
 "> Welcome Pavuluri Sai Narayana"
+
 
 ];
 
@@ -125,15 +129,27 @@ let bootIndex=0;
 
 function bootAnimation(){
 
-    if(bootIndex<bootLines.length){
+    if(bootIndex < bootLines.length){
 
         terminal.innerHTML += bootLines[bootIndex] + "<br>";
 
-        terminal.scrollTop=terminal.scrollHeight;
+        terminal.scrollTop = terminal.scrollHeight;
 
         bootIndex++;
 
         setTimeout(bootAnimation,500);
+
+    }
+
+    else{
+
+        setTimeout(function(){
+
+            terminal.style.display = "none";
+
+            document.getElementById("profileContainer").style.display = "block";
+
+        },1500);
 
     }
 
